@@ -156,7 +156,7 @@ footer a:hover{
 
 @media (max-width: 510px) {
     .slider {
-        height: 203x;
+        height: 203px;
     }
 }
 
@@ -788,17 +788,43 @@ footer {
     font-size: 90%;
     z-index: 30;
 }
-.RVHFEED_class {
-    font: 12px/1.2em Arial, Helvetica, sans-serif;
-    padding-left: 15px;
-    padding-bottom: 15px;
+
+.form-control-calc {
     margin: 0;
+}
+.form-calc-price {
+    color: #aa0000;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
 
 }
-.RVHFEED_class a {
-    color: #679325;
-    font: bold 14px Arial;
+.form-calc-header {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
 }
-.RVHFEED_class li {
-    padding-bottom: 10px;
+.form-control-calc {
+    margin: auto;
+    width: 100%;
+    height: 25px;
+    border-color: #eee;
+    border: 1px solid #eee;
+    text-align: center;
 }
+
+/*.RVHFEED_class {*/
+    /*font: 12px/1.2em Arial, Helvetica, sans-serif;*/
+    /*padding-left: 15px;*/
+    /*padding-bottom: 15px;*/
+    /*margin: 0;*/
+
+/*}*/
+/*.RVHFEED_class a {*/
+    /*color: #679325;*/
+    /*font: bold 14px Arial;*/
+/*}*/
+/*.RVHFEED_class li {*/
+    /*padding-bottom: 10px;*/
+/*}*/
