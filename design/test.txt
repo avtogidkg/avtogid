@@ -1,44 +1,30 @@
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">Расчет госпошлины</h3>
- 	</div>
- 	<div>
-{literal}
-  
-       <!DOCTYPE html>
-<html>
-        <head>
-                <meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-          			
-                <title>Расчет стоимости 1% госпошлины за переоформление авто</title>
-                <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-        </head>
-<body>
-        <form id="service-fee" action="#" method="post">
-          	<select id="p" name="p" class="form-control-calc">
-          		<option value="1">Переоформление</option>
-          		<option value="5">Оформление</option>
-        	</select>
-          	<p class="form-calc-header">Категория:</p><div style="owerflow: hidden;">
-                <select id="s" name="s" class="fee_select form-control-calc" size="4">
-                        <option value="0">Легковые автомобили</option>
-                        <option value="1">Автобусы, Микроавтобусы, Грузовые автомобили</option>
-                        <option value="2">Прицепы и прицепные устройства</option>
-                        <option value="3">Квадрициклы, Трициклы, Мотоциклы, Скутеры</option>
-          </select></div>
-                <div id="select-c"></div>
-                <div id="select-y"></div>
-                <div id="select-v"></div>
-                <div id="get-price"></div>
-
-        </form>
-
-        <script type="text/javascript">
-                $(document)["on"]("change",".fee_select",function(el){var element_name=$(this)["attr"]("name");var element_return=$("#select-c");var ajax_data=$("#service-fee")["serialize"]();var data_s=$("#s")["val"]();$("#get-price")["html"]("");if(element_name== "s"){ajax_data= {s:data_s};$("#select-c")["html"]("");$("#select-y")["html"]("");$("#select-v")["html"]("")}else {if(element_name== "c"){var data_c=$("#c")["val"]();ajax_data= {s:data_s,c:data_c};$("#select-y")["html"]("");$("#select-v")["html"]("");element_return= $("#select-y")}else {if(element_name== "y"){var data_c=$("#c")["val"]();var data_y=$("#y")["val"]();ajax_data= {s:data_s,c:data_c,y:data_y};$("#select-v")["html"]("");element_return= $("#select-v")}}};$["ajax"]({type:"GET",url:"https://e.srs.kg/api/getFee",data:ajax_data,dataType:"json"})["done"](function(data){data= JSON["parse"](JSON["stringify"](data));if(data["message"]["type"]== "price"){$("#get-price")["addClass"]("form-calc-price")["html"]("<p>\u0421\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u044c: "+ data["message"]["array"]+ "\u0441\u043e\u043c</p>")}else {$("<p>",{text:data["message"]["header"]})["addClass"]("form-calc-header")["appendTo"](element_return);var element_size=data["message"]["array"]["length"];var element=$("<select></select>")["attr"]({id:data["message"]["name"],name:data["message"]["name"],size:element_size})["addClass"]("fee_select form-control-calc");$["each"](data["message"]["array"],function(i,el){element["append"]("<option value="+ i+ ">"+ el+ "</option>")});element_return["append"](element)}})})
-        </script>
-</body>
-</html>
-  {/literal}
-      </div>
+{capture assign="listingUrl"}{page_path id='listing'}{$listing.id}/{$listing.urlData|replace:' ':'-'|escape:"urlpathinfo"}.html{/capture}
+<div class="thumbnail" {if $listing.feature_highlighted.exists && $listing.feature_highlighted.isTrue}style="background-color:{get_custom_setting id='color_for_highlighted_listing' theme=$GLOBALS.current_theme}"{/if}>
+    <div class="row">
+        <div class="col-sm-3 col-xs-12">
+            {include file="classifieds^listing_display_image.tpl"}
+        </div>
+        <div class="col-sm-9 col-xs-12">
+            <div class="caption">
+                <div class="row">
+                    <div class="col-sm-9 col-xs-10">
+                        <h3 style="margin-top: 0">
+                            <a href="{$listingUrl}">{$listing|cat:""|strip_tags:false|truncate:60}</a>
+                        </h3>
+                    </div>
+                    <div class="col-sm-3 col-xs-2">
+                        {include file=$listingControlsTemplate listingUrl=$listingUrl}
+                    </div>
+                </div>
+                <div class="row listing-item-details">
+                    <div class="col-sm-8 col-xs-12">
+                        {include file="classifieds^listing_display_detail.tpl"}
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        {include file="classifieds^listing_display_price.tpl"}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
