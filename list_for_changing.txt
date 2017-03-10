@@ -2,6 +2,7 @@
 ./modules
 ./modules/custom_theme_autogid
 ./modules/custom_theme_autogid/classifieds
+./modules/custom_theme_autogid/classifieds/video_player.tpl
 ./modules/custom_theme_autogid/classifieds/search_results_content.tpl
 ./modules/custom_theme_autogid/classifieds/search_results.tpl
 ./modules/custom_theme_autogid/classifieds/category_templates
