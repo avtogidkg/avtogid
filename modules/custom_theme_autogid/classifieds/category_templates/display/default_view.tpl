@@ -182,8 +182,8 @@
                     </div>
                 </div>
             </div>
-            {include file='banners^gas_listing_right.tpl'}
             {include file='banners^calc_tax.tpl'}
+            {include file='banners^gas_listing_right.tpl'}
             {assign var='carAge' value='Y'|date - $listing.Year.value}
             {if $listing.category_sid.value.Category eq 'Auto' and $GLOBALS.settings.credit_bank_max_car_age gt $carAge}
                 {module name='custom_credit_calculator' function='credit_calculator_block' price=$listing.AutoPrice.value}
