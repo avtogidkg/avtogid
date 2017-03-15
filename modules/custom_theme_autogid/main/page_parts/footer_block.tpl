@@ -17,6 +17,7 @@
                         <a href="{page_path id='aboutpaper'}">[[AboutPaper]]</a>
                     </div>
                     <div style="text-align: right">
+                        <div class="netkg">
                         {literal}
                             <!-- WWW.NET.KG , code for http://avtogid.kg -->
                             <script language="javascript" type="text/javascript">
@@ -49,6 +50,7 @@
                             </noscript>
                             <!-- /WWW.NET.KG -->
                         {/literal}
+                    </div>
                     </div>
                 </div>
 
