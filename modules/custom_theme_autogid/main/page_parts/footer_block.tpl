@@ -16,8 +16,7 @@
                         <a href="{page_path id='aboutweb'}">[[AboutWeb]]</a> |
                         <a href="{page_path id='aboutpaper'}">[[AboutPaper]]</a>
                     </div>
-                    <div style="text-align: right">
-                        <div class="netkg">
+                    <div class="netkg" style="text-align: right">
                         {literal}
                             <!-- WWW.NET.KG , code for http://avtogid.kg -->
                             <script language="javascript" type="text/javascript">
@@ -40,7 +39,7 @@
                             <script language="javascript" type="text/javascript">
                                 java1+="&amp;jscript="+java+"&amp;rand="+Math.random();
                                 document.write("<a href='https://www.net.kg/stat.php?id=1723&amp;fromsite=1723' target='_blank'>"+
-                                        "<img src='https://www.net.kg/img.php?id=1723&amp;"+java1+
+                                        "<img  class='netkgimg' src='https://www.net.kg/img.php?id=1723&amp;"+java1+
                                         "' border='0' alt='WWW.NET.KG' width='21' height='16' /></a>");
                             </script>
                             <noscript>
@@ -50,7 +49,6 @@
                             </noscript>
                             <!-- /WWW.NET.KG -->
                         {/literal}
-                    </div>
                     </div>
                 </div>
 
