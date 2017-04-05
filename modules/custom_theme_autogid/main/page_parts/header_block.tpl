@@ -2,12 +2,6 @@
 {require component="twitter-bootstrap" file="css/bootstrap.min.css"}
 {require component="twitter-bootstrap" file="js/bootstrap.min.js"}
 {include file="miscellaneous^bootstrap_button_noconflict.tpl"}
-<script data-skip-moving="true">
-    (function(w,d,u,b){
-        s=d.createElement('script');r=(Date.now()/1000|0);s.async=1;s.src=u+'?'+r;
-        h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-    })(window,document,'https://cdn.bitrix24.ru/b989819/crm/site_button/loader_2_yph8h6.js');
-</script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56c2b6646531cb92" async="async"></script>
 
 <header class="login-bg navbar-fixed-top">
