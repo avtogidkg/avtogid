@@ -2,7 +2,9 @@
 <div class="newsBlock">
     <h2>[[$categoryTitle]]</h2>
     {literal}
-        <script type='text/javascript' charset='utf-8' src='//scripts.hashemian.com/jss/feed.js?print=yes&numlinks=5&summarylen=500&seedate=no&popwin=no&url=http:%2F%2Fnews.avtogid.kg%2Ffeed'></script>
+        <!-- start feedwind code -->
+        <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="6993/"></script>
+        <!-- end feedwind code -->
     {/literal}
     <div class="showMoreBtn"><a href="//news.avtogid.kg">[[Archive]]</a></div>
 </div>
