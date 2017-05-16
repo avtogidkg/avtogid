@@ -358,11 +358,11 @@ footer a:hover{
     margin-top: 0;
 }
 .price-cred{
-    background: #0b5b98;
+    background: #4c2369;
     cursor: pointer;
 }
 .price-cred:before{
-    border-color: transparent #0b5b98 transparent transparent;
+    border-color: transparent #4c2369 transparent transparent;
 }
 h2.list-category-head{
     font-size: 30px;
