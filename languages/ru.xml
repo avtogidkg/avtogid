@@ -7820,13 +7820,13 @@
         <tr lang="ru"> Страховка </tr>
       </string>
       <string key="Loan amount">
-        <tr lang="ru"> Сумма кредитования </tr>
+        <tr lang="ru"> Сумма к выплате кредита </tr>
       </string>
       <string key="Sum of interest">
         <tr lang="ru"> Общая сумма процентов </tr>
       </string>
       <string key="Payment amount">
-        <tr lang="ru"> Общая стоимость авто </tr>
+        <tr lang="ru"> Общая стоимость авто с учётом кредита </tr>
       </string>
       <string key="Loan duration in months">
         <tr lang="ru"> Срок кредитования (в месяцах) </tr>
