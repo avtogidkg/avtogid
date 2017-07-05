@@ -1,7 +1,7 @@
 {capture assign="listingUrl"}{page_path id='listing'}{$listing.id}/{$listing.urlData|replace:' ':'-'|escape:"urlpathinfo"}.html{/capture}
 <div class="thumbnail" {if $listing.feature_highlighted.exists && $listing.feature_highlighted.isTrue}style="background-color:{get_custom_setting id='color_for_highlighted_listing' theme=$GLOBALS.current_theme}"{/if}>
     <div class="row">
-        {if $GLOBALS.current_page_uri == '/browse/Parts/' || $GLOBALS.current_page_uri == '/browse/Services/'}
+        {if $GLOBALS.current_page_uri == '/browse/Parts/' || $GLOBALS.current_page_uri == '/browse/Parts/Parts+store/' || $GLOBALS.current_page_uri == '/browse/Services/'}
             {if $listing.pictures.numberOfItems == 0}
                 <div class="col-sm-12 col-xs-12">
                     <div class="caption">
