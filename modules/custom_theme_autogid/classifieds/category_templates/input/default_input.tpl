@@ -1,6 +1,6 @@
 {assign var='excluded_fields' value=['createdAt', 'updatedAt', 'AllowExchange', 'moderComment', 'paymentActions', 'paymentId', 'ups', 'status', 'firstApprove', 'AllowComments', 'IsInPaper', 'SizeInPaper', 'urgent', 'fromPaper', 'AutoSold']}
 <div class="form">
-    {if $categoryId != 'PartsStore' && $categoryId != 'PartSpecial'}
+    {if $categoryId != 'PartsStore' && $categoryId != 'PartSpecial' && $categoryId != 'PartTruck' && $categoryId != 'PartBus' && $categoryId != 'PartMiniBus'}
     <fieldset>
         <fieldset>
             <legend>[[Photo]]</legend>
