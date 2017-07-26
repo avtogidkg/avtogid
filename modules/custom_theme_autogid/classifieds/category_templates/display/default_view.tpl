@@ -162,7 +162,7 @@
                             <div class="col-md-6">
                                 <dl class="dl-horizontal">
                                     {assign var=contactDataFields value=['Name', 'PhoneNumber', 'phone2', 'phone3', 'Email', 'Address']}
-                                    {foreach $magicFields->excludeSystemFields()->excludeByType('text', 'rating', 'video', 'calendar', 'multilist')->excludeById('SizeInPaper', 'IsInPaper', 'urgent', 'paymentId', 'ups', 'status', 'firstApprove', 'id', 'fromPaper', 'RideDistanceUnit', 'AllowComments', 'PostInTheNewspaper', 'OnNIssues') as $fieldId => $formField}
+                                    {foreach $magicFields->excludeSystemFields()->excludeByType('text', 'rating', 'video', 'calendar', 'multilist')->excludeById('SizeInPaper', 'IsInPaper', 'urgent', 'paymentId', 'ups', 'status', 'firstApprove', 'id', 'fromPaper', 'RideDistanceUnit', 'AllowComments', 'PostInTheNewspaper', 'OnNIssues', 'DriveType', 'Wheel') as $fieldId => $formField}
                                         {if $listing.$fieldId.isNotEmpty}
                                             <dt class="fieldCaption {$fieldId} {if in_array($fieldId, $contactDataFields)}contact-data{/if}">[[$formField.caption]]</dt>
                                             <dd class="fieldValue {$fieldId} {if in_array($fieldId, $contactDataFields)}contact-data{/if}">
@@ -182,6 +182,7 @@
                     </div>
                 </div>
             </div>
+            {include file='banners^tag_cloud.tpl'}
             {include file='banners^calc_tax.tpl'}
             {include file='banners^gas_listing_right.tpl'}
             {assign var='carAge' value='Y'|date - $listing.Year.value}
@@ -210,16 +211,16 @@
     <script type="text/javascript">
         $(function () {
             $('.collapse')
-                    .on('show.bs.collapse', function () {
-                        $('.glyphicon', $(this).parent())
-                                .addClass($('.glyphicon', $(this).parent()).data('icon-down'))
-                                .removeClass($('.glyphicon', $(this).parent()).data('icon-up'));
-                    })
-                    .on('hide.bs.collapse', function () {
-                        $('.glyphicon', $(this).parent())
-                                .addClass($('.glyphicon', $(this).parent()).data('icon-up'))
-                                .removeClass($('.glyphicon', $(this).parent()).data('icon-down'));
-                    })
+                .on('show.bs.collapse', function () {
+                    $('.glyphicon', $(this).parent())
+                        .addClass($('.glyphicon', $(this).parent()).data('icon-down'))
+                        .removeClass($('.glyphicon', $(this).parent()).data('icon-up'));
+                })
+                .on('hide.bs.collapse', function () {
+                    $('.glyphicon', $(this).parent())
+                        .addClass($('.glyphicon', $(this).parent()).data('icon-up'))
+                        .removeClass($('.glyphicon', $(this).parent()).data('icon-down'));
+                })
         });
         $(document).ready(function() {
             $('#show-listing-contact-data').click(function() {
