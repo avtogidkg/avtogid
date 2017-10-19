@@ -115,4 +115,7 @@
         <!-- /Yandex.Metrika counter -->
     {/literal}
     {/if}
+    {literal}
+        <script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/f7ba6147cf91d4a16dbba53677c2c9c4_1.js" async></script>
+    {/literal}
 </head>
